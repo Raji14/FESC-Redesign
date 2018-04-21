@@ -1,0 +1,48 @@
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+/*Home page carousel styles*/
+
+.carousel-item {
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.carousel-image1 {
+  background-image: url('../images/pexels-photo-157039.jpeg');
+}
+
+.carousel-image2 {
+  background-image: url('../images/pexels-photo-459728.jpeg');
+}
+
+.carousel-image3 {
+  background-image: url('../images/pexels-photo-414807.jpeg');
+}
+
+/*End of Home page carousel styles*/
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+/*Research page icon styles*/
+
+.iconDisplay {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #f0f0f0;
+}
