@@ -46,3 +46,15 @@ body {
   flex-wrap: wrap;
   background-color: #f0f0f0;
 }
+
+/*Media share styles*/
+
+.mediaSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.mediaSection p {
+  margin-right: 1rem;
+}

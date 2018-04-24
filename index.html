@@ -8,9 +8,14 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+  <!-- facebook tags -->
+  <meta property="og:title" content="Florida Energy Systems Consortium (FESC)">
+  <meta property="og:description" content="Bringing energy solutions to Florida! Share the word!">
+  <meta property="og:url" content="https://raji14.github.io/FESC-Redesign/index.html">
+  <meta property="og:type" content="website">
+
+
   <!-- twitter tags -->
-
-
   <meta name="twitter:title" content="Florida Energy Systems Consortium (FESC)">
   <meta name="twitter:description" content="Bringing energy solutions to Florida! Share the word!">
   <meta name="twitter:card" content="summary_large_image">
@@ -48,6 +53,21 @@
 </head>
 
 <body>
+
+  <!-- Facebook SDK -->
+  <div id="fb-root"></div>
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+  </script>
+  <!-- / Facebook SDK -->
 
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -204,15 +224,17 @@
 
     <hr>
 
-    <!-- Call to Tweet Section -->
-    <section class="row mb-4">
-      <section class="col-md-8">
-        <p>Share the word! <br> Tweet about our exciting research and innovative breakthroughs in the field of renewable energy!</p>
-      </section>
+    <!-- Call to Share Section -->
+    <section class="mediaSection">
+
+      <p>Share the word! <br> Tweet about our exciting research and innovative breakthroughs in the field of renewable energy!</p>
+      <div class="fb-share-button" data-href="https://raji14.github.io/FESC-Redesign/index.html" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fraji14.github.io%2FFESC-Redesign%2Findex.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+      <div><a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Florida%20Energy%20Systems%20Consortium%20Bringing%20energy%20solutions%20to%20Florida!" data-size="large">
+Tweet</a></div>
+
       <hr>
-      <section class="col-md-4">
-        <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Florida%20Energy%20Systems%20Consortium%20Bringing%20energy%20solutions%20to%20Florida!" data-size="large">
-Tweet</a>
+      <section>
+
 
       </section>
     </section>
