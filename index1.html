@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- facebook tags -->
+  <meta property="og:title" content="Florida Energy Systems Consortium (FESC)">
+  <meta property="og:description" content="Bringing energy solutions to Florida! Share the word!">
+  <meta property="og:url" content="https://raji14.github.io/FESC-Redesign/index.html">
+  <meta property="og:type" content="website">
+
+
+  <!-- twitter tags -->
+  <meta name="twitter:title" content="Florida Energy Systems Consortium (FESC)">
+  <meta name="twitter:description" content="Bringing energy solutions to Florida! Share the word!">
+  <meta name="twitter:card" content="summary_large_image">
+
+
+  <title>Florida Energy Systems Consortium (FESC)</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="css/styles1.css" rel="stylesheet">
+
+  <!-- Twitter script -->
+  <script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+      return t;
+    }(document, "script", "twitter-wjs"));
+  </script>
+
+
+</head>
+
+<body>
+  <!-- Facebook SDK -->
+  <div id="fb-root"></div>
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!-- / Facebook SDK -->
+
+
+  <script>
+    function main() {
+      var menuIconOpen = document.getElementsByClassName("open")[0];
+      var menuIconClose = document.getElementsByClassName("close")[0];
+      var menuItems = document.getElementsByClassName("menu");
+
+      menuIconClose.style.display = "none";
+
+      menuIconOpen.onclick = function() {
+        this.style.display = "none";
+        menuIconClose.style.display = "block";
+        menuDisplay("show", menuItems);
+      };
+
+      menuIconClose.onclick = function() {
+        this.style.display = "none";
+        menuIconOpen.style.display = "block";
+        menuDisplay("hide", menuItems);
+      };
+    }
+
+    function menuDisplay(state, items) {
+      if (state == "show") {
+        for (var i = 1; i < items.length; i++) {
+          items[i].classList.add("show");
+        }
+      } else {
+        for (var i = 1; i < items.length; i++) {
+          items[i].classList.remove("show");
+        }
+      }
+    }
+
+    window.onload = function() {
+      main();
+    }
+  </script>
+
+
+  <nav class="flexmenu">
+    <div class="flex">
+      <div class="menu">Florida Energy Systems Consortium (FESC)</div>
+      <div class="menu">
+        <a href="#">FESC Research</a>
+      </div>
+      <div class="menu">
+        <a href="#">Education</a>
+      </div>
+      <div class="menu">
+        <a href="#">Energy Industry</a>
+      </div>
+      <div class="menu">
+        <a href="#">About Us</a>
+      </div>
+      <div class="mobile-menu">
+        <span class="menu-icon open">&#x2261;</span>
+        <span class="menu-icon close">&#x2715;</span>
+      </div>
+    </div>
+  </nav>
+
+
+  <section id="main">
+    <h1 class="my-4">Welcome to Florida Energy Systems Consortium (FESC)</h1>
+    <p>The Florida Energy Systems Consortium (FESC) was created by the Florida State government to promote collaboration among the energy experts at its 12 supported universities to share energy-related expertise. The consortium assists the state in the development and implementation of an environmentally compatible, sustainable, and efficient energy strategic plan. The Consortium performs research and development on innovative energy systems that lead to alternative energy strategies, improved energy efficiencies, and expanded economic development for the state.
+    </p>
+
+
+    <!-- Carousel -->
+
+    <div class="carousel-wrapper">
+      <span id="item-1"></span>
+      <span id="item-2"></span>
+      <span id="item-3"></span>
+      <div class="carousel-item item-1">
+        <h2>Item 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan pretium dolor vel convallis. Aliquam erat volutpat. Maecenas lacus nunc, imperdiet sed mi et, finibus suscipit mi.</p>
+        <a class="arrow arrow-prev" href="#item-3"></a>
+        <a class="arrow arrow-next" href="#item-2"></a>
+      </div>
+
+      <div class="carousel-item item-2">
+        <h2>Item 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan pretium dolor vel convallis. Aliquam erat volutpat.</p>
+        <a class="arrow arrow-prev" href="#item-1"></a>
+        <a class="arrow arrow-next" href="#item-3"></a>
+      </div>
+
+      <div class="carousel-item item-3">
+        <h2>Item 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan pretium dolor vel convallis. Aliquam erat volutpat.</p>
+        <a class="arrow arrow-prev" href="#item-2"></a>
+        <a class="arrow arrow-next" href="#item-1"></a>
+      </div>
+    </div>
+
+
+    <!--End Carousel-->
+
+
+  </section>
+
+  <section class="features">
+    <h3 class="title">
+      <h2>Bringing Energy Solutions to Florida, the nation and the world</h2>
+    </h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices. Morbi vitae pulvinar velit. Sed aliquam dictum sapien, id sagittis augue malesuada eu.</p>
+    <hr>
+
+    <ul class="grid">
+      <li>
+        <i class="fa fa-cubes"></i>
+        <h4>FESC Research</h4>
+        <p>The Florida Energy System Consortium (FESC) performs scholarly research and analysis of energy systems that contributes to a sustainable energy economy for Florida.</p>
+      </li>
+      <li>
+        <i class="fas fa-graduation-cap"></i>
+        <h4>Education</h4>
+        <p>FESC’s training and educational efforts are aimed at multiple levels of the career ladder: community college trained technicians, bachelors level students, graduate researchers, and practitioners who seek to update their existing skills.</p>
+      </li>
+      <li>
+        <i class="fas fa-burn"></i>
+        <h4>Energy Industry</h4>
+        <p>FESC has an Industrial Partnership and Innovation Strategy that assures active collaboration with the private sector and other partners that will support and guide FESC’s vision, collaborate with FESC in our research, education, innovation, and outreach programs.</p>
+      </li>
+    </ul>
+
+  </section>
+
+
+  <section class="reviews">
+    <h3 class="title">Our Goal</h3>
+    <p>Through collaborative research and development across the State University System and the industry, the goal of the consortium is to become a world leader in energy research, education, technology, and energy systems analysis. In so doing, the consortium shall:</p>
+    <ul>
+      <li>Coordinate and initiate increased collaborative interdisciplinary energy research among the universities and the energy industry.</li>
+      <li>Assist in the creation and development of a Florida-based energy technology industry through efforts that would expedite commercialization of innovative energy technologies.</li>
+      <li>Provide a state resource for objective energy systems analysis.</li>
+      <li>Develop education and outreach programs to prepare a qualified energy workforce and informed public.</li>
+
+    </ul>
+
+  </section>
+
+  <section class="contact">
+    <h3 class="title">Join our newsletter</h3>
+    <p>Sign up for the FESC Florida Energy Connections Newsletter</p>
+    <form>
+      <input type="email" placeholder="Email">
+      <a href="#" class="btn">Subscribe now</a>
+    </form>
+  </section>
+
+
+  <footer>
+    <p>Share the word! <br> Tweet about our exciting research and innovative breakthroughs in the field of renewable energy!</p>
+    <div class="fb-share-button" data-href="https://raji14.github.io/FESC-Redesign/index.html" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fraji14.github.io%2FFESC-Redesign%2Findex.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+    <div><a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Florida%20Energy%20Systems%20Consortium%20Bringing%20energy%20solutions%20to%20Florida!" data-size="large">
+Tweet</a></div>
+  </footer>
+</body>
+
+
+</html>
