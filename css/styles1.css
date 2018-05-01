@@ -17,8 +17,8 @@ h2 {
 
 .flexmenu {
   width: 100%;
-  background-color: #00bc9a;
-  color: #fff;
+  background-color: #ffffff;
+  color: #435363;
   line-height: 1.4em;
 
 }
@@ -36,7 +36,7 @@ h2 {
   align-items: flex-start;
   justify-content: flex-start;
   width: 20%;
-  font-weight: bold;
+  /*  font-weight: bold;*/
 }
 
 .menu:first-child {
@@ -48,14 +48,15 @@ h2 {
 }
 
 .menu a {
-  color: #fff;
+  color: #435363;
   text-decoration: none;
   padding: 0 0.5em;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
-.menu:nth-child(n+2):hover {
-  background-color: #c0c0c0;
-  color: #000;
+.menu a:hover {
+  color: #eb6852;
   /*  border-radius: 0.5em;*/
 }
 
@@ -92,7 +93,7 @@ h2 {
     align-items: center;
     justify-content: center;
     width: 20vw;
-    font-weight: bold;
+
   }
 }
 
@@ -118,46 +119,11 @@ h2 {
   transition: all 0.5s ease-in-out;
 }
 
-.arrow {
-  position: absolute;
-  top: 0;
-  display: block;
-  width: 50px;
-  height: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  background: url("http://dancort.es/assets/img/css-carousel/carousel-arrow-dark.png") 50% 50% / 20px no-repeat;
-}
-
-.arrow-prev {
-  left: 0;
-}
-
-.arrow-next {
-  right: 0;
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
 .light {
   color: white;
 }
 
-/*
-@media (max-width: 480px) {
-  .arrow,
-  .light .arrow {
-    background-size: 10px;
-    background-position: 10px 50%;
-  }
-}
 
-}*/
-
-/*Select every element*/
-
-[id^="item"] {
-  display: none;
-}
 
 .item-1 {
   height: 45vh;
@@ -169,47 +135,11 @@ h2 {
   background-size: cover;
   z-index: 2;
   opacity: 1;
-  background-image: url('../images/pexels-photo-157039.jpeg');
+  background-image: url('../images/pexels-photo-207489.jpeg');
 
 }
 
-.item-2 {
-  height: 45vh;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-image: url('../images/pexels-photo-459728.jpeg');
 
-}
-
-.item-3 {
-  height: 45vh;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-image: url('../images/pexels-photo-414807.jpeg');
-
-}
-
-*:target ~ .item-1 {
-  opacity: 0;
-}
-
-#item-1:target ~ .item-1 {
-  opacity: 1;
-}
-
-#item-2:target ~ .item-2,
-#item-3:target ~ .item-3 {
-  z-index: 3;
-  opacity: 1;
-}
-
-}
 
 
 /*End Carousel Styles */
@@ -217,33 +147,10 @@ h2 {
 body {
   font-family: 'Roboto', sans-serif;
   color: #3f3f3f;
+  background-color: #eff7fe;
 }
 
-/*
-ul,
-nav {
-  list-style: none;
-}
 
-a {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  opacity: 0.9;
-}
-
-a:hover {
-  opacity: 1;
-}
-
-a.btn {
-  color: #fff;
-  border-radius: 4px;
-  text-transform: uppercase;
-  background-color: #2196F3;
-  font-weight: 800;
-  text-align: center;
-}*/
 
 hr {
   width: 80%;
