@@ -12,7 +12,21 @@ $lightBorder: 1px solid #cccccc;
 $bottommargin: 1rem;
 $roundedBorder: 5px;
 $halfmargin: .5rem;
+$footerBackground: #414a4f;
+$smallText: .75rem;
 
+
+@mixin sectionImage($src, $fallbackcolor) {
+  width: 80%;
+  border-radius: $roundedBorder;
+  border: $lightBorder;
+}
+
+@mixin flexsection {
+  display: flex;
+  flex-direction: row;
+
+}
 
 * {
   margin: 0;
@@ -81,6 +95,23 @@ section {
   border-bottom: $borderColor;
 }
 
+.textLinks {
+  text-decoration: none;
+  color: #00bc9a;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+
+  }
+}
+
+.iconDisplay {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #f0f0f0;
+}
 
 /*----------------------
  	Nav Section
@@ -105,17 +136,20 @@ section {
 .menu {
   display: none;
   align-items: flex-start;
-  /*  justify-content: left;*/
   width: 20%;
   text-transform: uppercase;
   white-space: nowrap;
   &:first-child {
     display: inline-flex;
     text-align: left;
-    justify-content: left;
+    justify-content: space-between;
     width: 80%;
     margin-left: 0;
     margin-right: auto;
+  }
+
+  .active {
+    color: $highlightcolor;
   }
   a {
     color: $primarynavcolor;
@@ -270,9 +304,7 @@ ul.grid {
 }
 
 .goalsSection {
-  display: flex;
-  flex-direction: row;
-  width: 90%;
+  @include flexsection;
 }
 
 @media screen and (max-width: 768px) {
@@ -342,42 +374,36 @@ footer {
   display: flex;
   flex-direction: column;
   color: #fff;
-  background-color: #414a4f;
-  p {
-    font-size: .75rem;
-  }
-  article {
-    margin-right: 1rem;
-  }
-  a {
-    color: #ffffff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: .75rem;
+  background-color: $footerBackground;
+  font-size: $smallText;
+  section {
+    align-items: flex-start;
 
-    &:hover {
-      color: $highlightcolor;
+    article {
+      margin-right: 1rem;
+    }
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: $smallText;
+
+      &:hover {
+        color: $highlightcolor;
+      }
     }
   }
 }
 
-
-
-footer section {
-  align-items: flex-start;
-}
-
 .affiliateSection {
-  display: flex;
-  flex-direction: row;
+  @include flexsection;
   flex-wrap: wrap;
   padding-right: .5rem;
   margin: 0;
 }
 
 .mediaSection {
-  display: flex;
-  flex-direction: row;
+  @include flexsection;
   flex-wrap: wrap;
   width: 100%;
   margin-top: 5px;
@@ -395,14 +421,56 @@ footer section {
 }
 
 .mediaShare {
-  display: flex;
-  flex-direction: row;
+  @include flexsection;
 }
 
 .copyright {
   padding: .5rem;
+  font-size: $smallText;
 }
 
 /*-------------
  	End Footer
 -------------*/
+
+/*-------------------------
+ 	Inner page styles
+-------------------------*/
+
+.innerSection {
+  @include flexsection
+}
+
+
+.breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  display: inline-block;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  color: #6c757d;
+  content: "/";
+}
+
+.breadcrumb-item + .breadcrumb-item:hover::before {
+  text-decoration: underline;
+}
+
+.breadcrumb-item + .breadcrumb-item:hover::before {
+  text-decoration: none;
+}
+
+.breadcrumb-item.active {
+  color: #6c757d;
+}
