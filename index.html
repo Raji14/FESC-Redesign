@@ -9,11 +9,10 @@
   <meta name="author" content="">
 
   <!-- facebook tags -->
-  <meta property="og:title" content="Florida Energy Systems Consortium (FESC)">
-  <meta property="og:description" content="Bringing energy solutions to Florida! Share the word!">
-  <meta property="og:url" content="https://raji14.github.io/FESC-Redesign/index.html">
-  <meta property="og:type" content="website">
-
+  <meta property="og:url" content="https://raji14.github.io/FESC-Redesign/index.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Florida Energy Systems Consortium (FESC)" />
+  <meta property="og:description" content="Bringing energy solutions to Florida!" />
 
   <!-- twitter tags -->
   <meta name="twitter:title" content="Florida Energy Systems Consortium (FESC)">
@@ -22,11 +21,12 @@
 
   <title>Florida Energy Systems Consortium (FESC)</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
   <!-- Custom styles for this template -->
-  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/new-styles.css" rel="stylesheet">
 
   <!-- Twitter script -->
   <script>
@@ -38,12 +38,10 @@
       js.id = id;
       js.src = "https://platform.twitter.com/widgets.js";
       fjs.parentNode.insertBefore(js, fjs);
-
       t._e = [];
       t.ready = function(f) {
         t._e.push(f);
       };
-
       return t;
     }(document, "script", "twitter-wjs"));
 
@@ -53,159 +51,142 @@
 </head>
 
 <body>
-
-  <!-- Facebook SDK -->
   <div id="fb-root"></div>
+
+  <!--  Facebook SDK-->
   <script>
     (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s);
       js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
   </script>
-  <!-- / Facebook SDK -->
 
-  <!-- Navigation -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <section class="container">
-      <a class="navbar-brand" href="index.html">Florida Energy Systems Consortium (FESC)</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      <section class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="research.html">
-                FESC Research </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="education.html">Education</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Energy Industry </a>
-            <section class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="#">Biomass</a>
-              <a class="dropdown-item" href="#">Solar</a>
-              <a class="dropdown-item" href="#">Natural Gas</a>
-              <a class="dropdown-item" href="#">Electricity</a>
-              <a class="dropdown-item" href="#">Wind</a>
-            </section>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                About </a>
-            <section class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="#">Leadership</a>
-              <a class="dropdown-item" href="#">Advisory Board</a>
-            </section>="#"
-          </li>
+  <!-- Nav menu script-->
+  <script>
+    function main() {
+      var menuIconOpen = document.getElementsByClassName("open")[0];
+      var menuIconClose = document.getElementsByClassName("close")[0];
+      var menuItems = document.getElementsByClassName("menu");
+      menuIconClose.style.display = "none";
+      menuIconOpen.onclick = function() {
+        this.style.display = "none";
+        menuIconClose.style.display = "block";
+        menuDisplay("show", menuItems);
+      };
+      menuIconClose.onclick = function() {
+        this.style.display = "none";
+        menuIconOpen.style.display = "block";
+        menuDisplay("hide", menuItems);
+      };
+    }
 
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
-          </li>
-        </ul>
-      </section>
-    </section>
-  </nav>
+    function menuDisplay(state, items) {
+      if (state == "show") {
+        for (var i = 1; i < items.length; i++) {
+          items[i].classList.add("show");
+        }
+      } else {
+        for (var i = 1; i < items.length; i++) {
+          items[i].classList.remove("show");
+        }
+      }
+    }
+    window.onload = function() {
+      main();
+    }
 
-  <header>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <!-- Slide One  -->
-        <div class="carousel-item active carousel-image1">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>FESC Research</h3>
-            <p>This is a description for the first slide.</p>
-          </div>
-        </div>
-        <!-- Slide Two  -->
-        <div class="carousel-item carousel-image2">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Second Slide</h3>
-            <p>This is a description for the second slide.</p>
-          </div>
-        </div>
-        <!-- Slide Three  -->
-        <div class="carousel-item carousel-image3">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Third Slide</h3>
-            <p>This is a description for the third slide.</p>
-          </div>
-        </div>
+  </script>
+
+  <!-- Nav Bar -->
+  <nav class="flexmenu">
+    <div class="flex">
+
+      <div class="menu"><a href="index.html"><img src="images/fesc-logo.png" alt="Florida Energy Systems Consortium (FESC)"></a></div>
+      <div class="menu"></div>
+
+      <div class="menu">
+        <a href="research.html">FESC Research</a>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+      <div class="menu">
+        <a href="education.html">Education</a>
+      </div>
+      <div class="menu">
+        <a href="#">Energy Industry</a>
+      </div>
+      <div class="menu">
+        <a href="#">About Us</a>
+      </div>
+      <div class="mobile-menu">
+        <span class="menu-icon open">&#x2261;</span>
+        <span class="menu-icon close">&#x2715;</span>
+      </div>
     </div>
-  </header>
+  </nav>
+  <!-- / Nav Bar -->
 
-  <!-- Page Content -->
-  <section class="container">
 
+  <section class="main">
     <h1 class="my-4">Welcome to Florida Energy Systems Consortium (FESC)</h1>
     <p>The Florida Energy Systems Consortium (FESC) was created by the Florida State government to promote collaboration among the energy experts at its 12 supported universities to share energy-related expertise. The consortium assists the state in the development and implementation of an environmentally compatible, sustainable, and efficient energy strategic plan. The Consortium performs research and development on innovative energy systems that lead to alternative energy strategies, improved energy efficiencies, and expanded economic development for the state.
     </p>
+  </section>
+  <!-- Main Image -->
 
 
-    <!-- Main Section -->
+  <div class="coverImage">
+
+  </div>
+
+
+  <!--End Main image-->
+
+
+  <!-- Featured Section -->
+
+  <section class="features">
+
     <h2>Bringing Energy Solutions to Florida, the nation and the world</h2>
 
-    <section class="row">
-      <section class="col-lg-4 col-sm-6 portfolio-item">
-        <section class="card h-100">
-          <a href="#"><img class="card-img-top" src="images/pexels-photo-256381.jpeg" alt=""></a>
-          <section class="card-body">
-            <h4 class="card-title">
-              <a href="#">FESC Research</a>
-            </h4>
-            <p class="card-text">The Florida Energy System Consortium (FESC) performs scholarly research and analysis of energy systems that contributes to a sustainable energy economy for Florida.</p>
-          </section>
-        </section>
-      </section>
-      <section class="col-lg-4 col-sm-6 portfolio-item">
-        <section class="card h-100">
-          <a href="#"><img class="card-img-top" src="images/library-la-trobe-study-students-159775.jpeg" alt=""></a>
-          <section class="card-body">
-            <h4 class="card-title">
-              <a href="#">Education</a>
-            </h4>
-            <p class="card-text">FESC’s training and educational efforts are aimed at multiple levels of the career ladder: community college trained technicians, bachelors level students, graduate researchers, and practitioners who seek to update their existing skills.</p>
-          </section>
-        </section>
-      </section>
-      <section class="col-lg-4 col-sm-6 portfolio-item">
-        <section class="card h-100">
-          <a href="#"><img class="card-img-top" src="images/architecture-blue-clouds-159279.jpg" alt=""></a>
-          <section class="card-body">
-            <h4 class="card-title">
-              <a href="#">Energy Industry</a>
-            </h4>
-            <p class="card-text">FESC has an Industrial Partnership and Innovation Strategy that assures active collaboration with the private sector and other partners that will support and guide FESC’s vision, collaborate with FESC in our research, education, innovation, and outreach programs.</p>
-          </section>
-        </section>
-      </section>
-    </section>
-    <!-- /.row -->
+    <p>Overarching to the Consortium’s research strategy is an energy systems approach to identify innovation opportunities, prepare an energy workforce, and guide economic development.</p>
 
-    <!-- Goal Section -->
-    <section class="row">
-      <section class="col-lg-6">
-        <h2>Our Goal</h2>
+
+    <ul class="grid">
+      <li>
+        <i class="fa fa-cubes"></i>
+        <h4>FESC Research</h4>
+        <img src="images/pexels-photo-256381.jpeg" alt="FESC Research">
+        <p>The Florida Energy System Consortium (FESC) performs scholarly research and analysis of energy systems that contributes to a sustainable energy economy for Florida.</p>
+
+      </li>
+      <li>
+        <i class="fas fa-graduation-cap"></i>
+        <h4>Education</h4>
+        <img src="images/library-la-trobe-study-students-159775.jpeg" alt="Education">
+        <p>FESC’s training and educational efforts are aimed at multiple levels of the career ladder: community college trained technicians, bachelors level students, graduate researchers, and practitioners who seek to update their existing skills.</p>
+      </li>
+      <li>
+        <i class="fas fa-burn"></i>
+        <h4>Energy Industry</h4>
+        <img src="images/architecture-blue-clouds-159279.jpg" alt="Energy Industry">
+        <p>FESC has an Industrial Partnership and Innovation Strategy that assures active collaboration with the private sector and other partners that will support and guide FESC’s vision, collaborate with FESC in our research, education, innovation, and outreach programs.</p>
+      </li>
+    </ul>
+
+  </section>
+
+  <!-- End Featured Section -->
+
+
+  <!-- Goals Section -->
+  <section class="goals">
+    <h2>Our Goal</h2>
+    <section class="goalsSection">
+      <section>
         <p>Through collaborative research and development across the State University System and the industry, the goal of the consortium is to become a world leader in energy research, education, technology, and energy systems analysis. In so doing, the consortium shall:</p>
         <ul>
           <li>Coordinate and initiate increased collaborative interdisciplinary energy research among the universities and the energy industry.</li>
@@ -214,46 +195,95 @@
           <li>Develop education and outreach programs to prepare a qualified energy workforce and informed public.</li>
 
         </ul>
+      </section>
+      <section><img src="images/alternative-alternative-energy-clean-159397.jpg" alt="Our Goals">
+      </section>
 
-      </section>
-      <section class="col-lg-6">
-        <img class="img-fluid rounded" src="images/alternative-alternative-energy-clean-159397.jpg" alt="">
-      </section>
     </section>
-    <!-- /.row -->
-
-    <hr>
-
-    <!-- Call to Share Section -->
-    <section class="mediaSection">
-
-      <p>Share the word! <br> Tweet about our exciting research and innovative breakthroughs in the field of renewable energy!</p>
-      <div class="fb-share-button" data-href="https://raji14.github.io/FESC-Redesign/index.html" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fraji14.github.io%2FFESC-Redesign%2Findex.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-      <div><a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Florida%20Energy%20Systems%20Consortium%20Bringing%20energy%20solutions%20to%20Florida!" data-size="large">
-Tweet</a></div>
-
-      <hr>
-      <section>
-
-
-      </section>
-    </section>
-
   </section>
-  <!-- /.container -->
+  <!-- End Goals Section -->
 
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <section class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Florida Energy Systems Consortium (FESC) 2018</p>
+  <!-- Newsletter Section -->
+  <section class="contact">
+    <h2>Join our newsletter</h2>
+    <p>Sign up for the FESC Florida Energy Connections Newsletter</p>
+    <form>
+      <input type="email" placeholder="Email">
+      <a href="#" class="btn">Subscribe now</a>
+
+    </form>
+  </section>
+  <!-- End Newsletter Section -->
+
+
+
+  <footer>
+    <section>
+      <section class="mediaSection">
+        <section><a href="index.html"><img src="images/fesc-logo.png" alt="FESC"></a></section>
+        <section>
+          <h3>FESC</h3>
+          <hr>
+          <p><a href="index.html">Home</a></p>
+          <p><a href="research.html">FESC Research</a></p>
+          <p><a href="education.html">Education</a></p>
+          <p><a href="">Energy Industry</a></p>
+          <p><a href="">About Us</a></p>
+        </section>
+        <section class="affiliateSection">
+          <h3>Affiliates</h3>
+          <hr>
+          <article class="">
+            <div>
+              <p><a href="http://www.ufl.edu/" target="_blank">University of Florida</a></p>
+              <p><a href="http://floridaenergy.ufl.edu/" target="_blank">Florida State University</a></p>
+              <p><a href="https://www.ucf.edu/" target="_blank">University of Central Florida</a></p>
+              <p><a href="http://www.usf.edu/" target="_blank">University of South Florida</a></p>
+              <p><a href="http://www.famu.edu/" target="_blank">Florida A&M University</a></p>
+              <p><a href="http://www.fau.edu/" target="_blank">Florida Atlantic University</a></p>
+              <p><a href="http://www.fgcu.edu/" target="_blank">Florida Gulf Coast University</a></p>
+              <p><a href="https://www.fiu.edu/" target="_blank">Florida International University</a></p>
+              <p><a href="https://www.ncf.edu/" target="_blank">New College of Florida</a></p>
+              <p><a href="http://www.unf.edu/" target="_blank">University of North Florida</a></p>
+              <p><a href="http://uwf.edu/" target="_blank">University of West Florida</a></p>
+              <p><a href="https://floridapolytechnic.org/" target="_blank">Florida Polytechnic University</a></p>
+            </div>
+          </article>
+          <article>
+            <div>
+              <p><a href="http://www.ufl.edu/" target="_blank">University of Florida</a></p>
+              <p><a href="http://floridaenergy.ufl.edu/" target="_blank">Florida State University</a></p>
+              <p><a href="https://www.ucf.edu/" target="_blank">University of Central Florida</a></p>
+              <p><a href="http://www.usf.edu/" target="_blank">University of South Florida</a></p>
+              <p><a href="http://www.famu.edu/" target="_blank">Florida A&M University</a></p>
+              <p><a href="http://www.fau.edu/" target="_blank">Florida Atlantic University</a></p>
+              <p><a href="http://www.fgcu.edu/" target="_blank">Florida Gulf Coast University</a></p>
+              <p><a href="https://www.fiu.edu/" target="_blank">Florida International University</a></p>
+              <p><a href="https://www.ncf.edu/" target="_blank">New College of Florida</a></p>
+              <p><a href="http://www.unf.edu/" target="_blank">University of North Florida</a></p>
+              <p><a href="http://uwf.edu/" target="_blank">University of West Florida</a></p>
+              <p><a href="https://floridapolytechnic.org/" target="_blank">Florida Polytechnic University</a></p>
+            </div>
+          </article>
+        </section>
+        <section>
+          <h3>Share the word</h3>
+          <hr>
+          <article>
+            <p>Share the word! <br> Tweet about our exciting research and innovative breakthroughs in the field of renewable energy!</p>
+            <div class="mediaSection">
+              <div class="fb-share-button" data-href="https://raji14.github.io/FESC-Redesign/index.html" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fraji14.github.io%2FFESC-Redesign%2Findex.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+              <div><a class="twitter-share-button spaceBetween" href="https://twitter.com/intent/tweet?text=Florida%20Energy%20Systems%20Consortium%20Bringing%20energy%20solutions%20to%20Florida!" data-size="large">
+Tweet</a></div>
+            </div>
+          </article>
+        </section>
+
+      </section>
     </section>
-    <!-- /.container -->
+    <p class="copyright"> Copyright © Florida Energy Systems Consortium (FESC) 2018</p>
   </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="bootstrap/jquery/jquery.min.js"></script>
-  <script src="bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 </body>
+
 
 </html>
