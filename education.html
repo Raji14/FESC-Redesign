@@ -9,11 +9,10 @@
   <meta name="author" content="">
 
   <!-- facebook tags -->
-  <meta property="og:title" content="Florida Energy Systems Consortium (FESC)">
-  <meta property="og:description" content="Bringing energy solutions to Florida! Share the word!">
-  <meta property="og:url" content="https://raji14.github.io/FESC-Redesign/index.html">
-  <meta property="og:type" content="website">
-
+  <meta property="og:url" content="https://raji14.github.io/FESC-Redesign/index.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Florida Energy Systems Consortium (FESC)" />
+  <meta property="og:description" content="Bringing energy solutions to Florida!" />
 
   <!-- twitter tags -->
   <meta name="twitter:title" content="Florida Energy Systems Consortium (FESC)">
@@ -22,11 +21,12 @@
 
   <title>Florida Energy Systems Consortium (FESC)</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
   <!-- Custom styles for this template -->
-  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/new-styles.css" rel="stylesheet">
 
   <!-- Twitter script -->
   <script>
@@ -38,12 +38,10 @@
       js.id = id;
       js.src = "https://platform.twitter.com/widgets.js";
       fjs.parentNode.insertBefore(js, fjs);
-
       t._e = [];
       t.ready = function(f) {
         t._e.push(f);
       };
-
       return t;
     }(document, "script", "twitter-wjs"));
 
@@ -53,142 +51,210 @@
 </head>
 
 <body>
-
-  <!-- Facebook SDK -->
   <div id="fb-root"></div>
+
+  <!--  Facebook SDK-->
   <script>
     (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s);
       js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
   </script>
-  <!-- / Facebook SDK -->
 
-  <!-- Navigation -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <section class="container">
-      <a class="navbar-brand" href="index.html">Florida Energy Systems Consortium (FESC)</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      <section class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="research.html">
-                FESC Research </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="education.html">Education</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Energy Industry </a>
-            <section class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="biomass.html">Biomass</a>
-              <a class="dropdown-item" href="solar.html">Solar</a>
-              <a class="dropdown-item" href="naturalgas.html">Natural Gas</a>
-              <a class="dropdown-item" href="electricity.html">Electricity</a>
-              <a class="dropdown-item" href="wind.html">Wind</a>
-            </section>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                About </a>
-            <section class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="leadership.html">Leadership</a>
-              <a class="dropdown-item" href="advisoryboard.html">Advisory Board</a>
-            </section>
-          </li>
+  <!-- Nav menu script-->
+  <script>
+    function main() {
+      var menuIconOpen = document.getElementsByClassName("open")[0];
+      var menuIconClose = document.getElementsByClassName("close")[0];
+      var menuItems = document.getElementsByClassName("menu");
+      menuIconClose.style.display = "none";
+      menuIconOpen.onclick = function() {
+        this.style.display = "none";
+        menuIconClose.style.display = "block";
+        menuDisplay("show", menuItems);
+      };
+      menuIconClose.onclick = function() {
+        this.style.display = "none";
+        menuIconOpen.style.display = "block";
+        menuDisplay("hide", menuItems);
+      };
+    }
 
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
-          </li>
-        </ul>
-      </section>
-    </section>
+    function menuDisplay(state, items) {
+      if (state == "show") {
+        for (var i = 1; i < items.length; i++) {
+          items[i].classList.add("show");
+        }
+      } else {
+        for (var i = 1; i < items.length; i++) {
+          items[i].classList.remove("show");
+        }
+      }
+    }
+    window.onload = function() {
+      main();
+    }
+
+  </script>
+
+  <!-- Nav Bar -->
+  <nav class="flexmenu">
+    <div class="flex">
+
+      <div class="menu"><a href="index.html"><img src="images/fesc-logo.png" alt="Florida Energy Systems Consortium (FESC)"></a></div>
+      <div class="menu"></div>
+
+      <div class="menu">
+        <a href="research.html">FESC Research</a>
+      </div>
+      <div class="menu">
+        <a href="education.html" class="active">Education</a>
+      </div>
+      <div class="menu">
+        <a href="#">Energy Industry</a>
+      </div>
+      <div class="menu">
+        <a href="#">About Us</a>
+      </div>
+      <div class="mobile-menu">
+        <span class="menu-icon open">&#x2261;</span>
+        <span class="menu-icon close">&#x2715;</span>
+      </div>
+    </div>
   </nav>
-
-  <!-- Page Content -->
-  <section class="container">
-
-    <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">Education
-    </h1>
-
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <a href="index.html">Home</a>
-      </li>
-      <li class="breadcrumb-item active">Education</li>
-    </ol>
+  <!-- / Nav Bar -->
 
 
-    <!-- Intro Content -->
-    <section class="row">
-      <section class="col-lg-6">
-        <img class="img-fluid rounded mb-4" src="images/pexels-photo-356086.jpeg" alt="Education">
-      </section>
-      <section class="col-lg-6">
-        <h2>Training and Educational Efforts</h2>
-        <p>Florida’s utilities have predicted that the State’s energy use will increase significantly in the coming years. Energy efficiency and renewable energy generation are vital to meeting this demand. </p>
-        <p>FESC’s statewide education program will produce a workforce trained to meet Florida’s energy needs. </p>
-        <p>FESC’s training and educational efforts are aimed at multiple levels of the career ladder: community college trained technicians, bachelors level students, graduate researchers, and practitioners who seek to update their existing skills. </p>
+  <section class="main">
 
-      </section>
+    <h1>Training and Educational Efforts</h1>
+    <p>Florida’s utilities have predicted that the State’s energy use will increase significantly in the coming years. Energy efficiency and renewable energy generation are vital to meeting this demand. FESC’s statewide education program will produce a workforce trained to meet Florida’s energy needs. </p>
+    <p>FESC’s training and educational efforts are aimed at multiple levels of the career ladder: community college trained technicians, bachelors level students, graduate researchers, and practitioners who seek to update their existing skills. </p>
+
+  </section>
+
+
+  <section class="goals">
+    <h2>Statewide Initiative</h2>
+    <section class="goalsSection">
+      <article>
+
+        <p>This statewide initiative is being distributed across partner institutions and capitalizes on each institution’s strengths to provide educational opportunities for both the conventional power generation industries and newly created energy related industries. New curricula in energy and coordinated programs across multiple universities is being developed to greatly expand the availability of energy education supporting existing and emerging energy industries in Florida. </p>
+        <p>The program also includes components targeted to public and commercial sectors. For the commercial sector, the FESC Education Program is working closely with the Industrial Partners Program to ensure rapid dissemination of Center research results to this important constituent group.</p>
+
+        <p>The Education program has three focus areas,
+          <ul>
+            <li>a community college programming at the AS and certificate level</li>
+            <li>nuclear energy education, and</li>
+            <li>a Masters degree in sustainable energy</li>
+          </ul>
+          <p>FESC has also reached out to Florida’s youth through <a href="docs/4H%20Project%20Guide%20for%20SAVE.pdf" class="textLinks">SAVE: Steps in Achieving Viable Energy.</a></p>
+      </article>
+      <section><img src="images/pexels-photo-356086.jpeg" alt="Statewide Initiative"> </section>
     </section>
-    <!-- /.row -->
-
     <section>
-      <p>This statewide initiative is being distributed across partner institutions and capitalizes on each institution’s strengths to provide educational opportunities for both the conventional power generation industries and newly created energy related industries. New curricula in energy and coordinated programs across multiple universities is being developed to greatly expand the availability of energy education supporting existing and emerging energy industries in Florida. The program also includes components targeted to public and commercial sectors. For the commercial sector, the FESC Education Program is working closely with the Industrial Partners Program to ensure rapid dissemination of Center research results to this important constituent group.</p>
-      <p>The Education program has three focus areas,
-        <ul>
-          <li>a community college programming at the AS and certificate level</li>
-          <li>nuclear energy education, and</li>
-          <li>a Masters degree in sustainable energy</li>
-        </ul>
-        FESC has also reached out to Florida’s youth through <a href="docs/4H%20Project%20Guide%20for%20SAVE.pdf">SAVE: Steps in Achieving Viable Energy.</a>
+      <article>
+        <p>FESC is working with the Florida Community College system as well as with the <a href="http://fl-ate.org/" target="_blank" class="textLinks">Florida Advanced Technological Education Center (FLATE)</a>, a National Science Foundation (NSF)-funded Regional Center that coordinates the design of industry-specific training programs for technicians. Complementary to FESC’s education goals, FLATE’s mission is to create a relevant statewide educational delivery system by supporting technical programs, curriculum development, best practices, student involvement, and outreach activities necessary to meet the workforce capacity and high performance skill needs of the manufacturing-related sectors within the state. </p>
+        <!--        <p>Read a 2014 FLATE report on the <a href="docs/Sustainability-Staffing-at-Florida-Colleges_Article_FLATE.pdf" class="textLinks">Evolution and Growth of Sustainability Careers at State and Community Colleges.</a></p>-->
+        <p>At the University level, programming includes a curriculum directed at the nuclear industry workforce, which now operates five nuclear power plants (FPL and PEF). To meet the demand anticipated from retirement and expansion, FESC has made a significant investment in the UF training reactor. FESC is developing a program to promote careers in nuclear energy and is evaluating the potential development of a community college level course that will introduce students to nuclear engineering and prepare them for pursuing a degree in the field. FESC is also developing a new M.S. degree program in Sustainable Energy and Power Engineering that will be distance delivered to make it available to the broadest of audiences.</p>
 
-        <p>FESC is working with the Florida Community College system as well as with the <a href="http://fl-ate.org/" target="_blank">Florida Advanced Technological Education Center (FLATE)</a>, a National Science Foundation (NSF)-funded Regional Center that coordinates the design of industry-specific training programs for technicians. Complementary to FESC’s education goals, FLATE’s mission is to create a relevant statewide educational delivery system by supporting technical programs, curriculum development, best practices, student involvement, and outreach activities necessary to meet the workforce capacity and high performance skill needs of the manufacturing-related sectors within the state. Read a 2014 FLATE report on the <a href="docs/Sustainability-Staffing-at-Florida-Colleges_Article_FLATE.pdf">Evolution and Growth of Sustainability Careers at State and Community Colleges.</a></p>
 
         <p>At the University level, programming includes a curriculum directed at the nuclear industry workforce, which now operates five nuclear power plants (FPL and PEF). To meet the demand anticipated from retirement and expansion, FESC has made a significant investment in the UF training reactor. FESC is developing a program to promote careers in nuclear energy and is evaluating the potential development of a community college level course that will introduce students to nuclear engineering and prepare them for pursuing a degree in the field. FESC is also developing a new M.S. degree program in Sustainable Energy and Power Engineering that will be distance delivered to make it available to the broadest of audiences.</p>
-    </section>
-    <hr>
-    <!-- Call to Share Section -->
-    <section class="mediaSection">
-
-      <p>Share the word! <br> Tweet about our exciting research and innovative breakthroughs in the field of renewable energy!</p>
-      <div class="fb-share-button" data-href="https://raji14.github.io/FESC-Redesign/index.html" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fraji14.github.io%2FFESC-Redesign%2Findex.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-      <div><a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Florida%20Energy%20Systems%20Consortium%20Bringing%20energy%20solutions%20to%20Florida!" data-size="large">
-Tweet</a></div>
-
-      <hr>
-      <section>
-
-
-      </section>
+      </article>
     </section>
 
   </section>
-  <!-- /.container -->
 
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <section class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Florida Energy Systems Consortium (FESC) 2018</p>
+
+
+  <!-- End Goals Section -->
+
+  <!-- Newsletter Section -->
+  <section class="contact">
+    <h2>Join our newsletter</h2>
+    <p>Sign up for the FESC Florida Energy Connections Newsletter</p>
+    <form>
+      <input type="email" placeholder="Email">
+      <a href="#" class="btn">Subscribe now</a>
+
+    </form>
+  </section>
+  <!-- End Newsletter Section -->
+
+
+
+  <footer>
+    <section>
+      <section class="mediaSection">
+        <section><a href="index.html"><img src="images/fesc-logo.png" alt="FESC"></a></section>
+        <section>
+          <h3>FESC</h3>
+          <hr>
+          <p><a href="index.html">Home</a></p>
+          <p><a href="research.html">FESC Research</a></p>
+          <p><a href="education.html">Education</a></p>
+          <p><a href="">Energy Industry</a></p>
+          <p><a href="">About Us</a></p>
+        </section>
+        <section class="affiliateSection">
+          <h3>Affiliates</h3>
+          <hr>
+          <article class="">
+            <div>
+              <p><a href="http://www.ufl.edu/" target="_blank">University of Florida</a></p>
+              <p><a href="http://floridaenergy.ufl.edu/" target="_blank">Florida State University</a></p>
+              <p><a href="https://www.ucf.edu/" target="_blank">University of Central Florida</a></p>
+              <p><a href="http://www.usf.edu/" target="_blank">University of South Florida</a></p>
+              <p><a href="http://www.famu.edu/" target="_blank">Florida A&M University</a></p>
+              <p><a href="http://www.fau.edu/" target="_blank">Florida Atlantic University</a></p>
+              <p><a href="http://www.fgcu.edu/" target="_blank">Florida Gulf Coast University</a></p>
+              <p><a href="https://www.fiu.edu/" target="_blank">Florida International University</a></p>
+              <p><a href="https://www.ncf.edu/" target="_blank">New College of Florida</a></p>
+              <p><a href="http://www.unf.edu/" target="_blank">University of North Florida</a></p>
+              <p><a href="http://uwf.edu/" target="_blank">University of West Florida</a></p>
+              <p><a href="https://floridapolytechnic.org/" target="_blank">Florida Polytechnic University</a></p>
+            </div>
+          </article>
+          <article>
+            <div>
+              <p><a href="http://www.ufl.edu/" target="_blank">University of Florida</a></p>
+              <p><a href="http://floridaenergy.ufl.edu/" target="_blank">Florida State University</a></p>
+              <p><a href="https://www.ucf.edu/" target="_blank">University of Central Florida</a></p>
+              <p><a href="http://www.usf.edu/" target="_blank">University of South Florida</a></p>
+              <p><a href="http://www.famu.edu/" target="_blank">Florida A&M University</a></p>
+              <p><a href="http://www.fau.edu/" target="_blank">Florida Atlantic University</a></p>
+              <p><a href="http://www.fgcu.edu/" target="_blank">Florida Gulf Coast University</a></p>
+              <p><a href="https://www.fiu.edu/" target="_blank">Florida International University</a></p>
+              <p><a href="https://www.ncf.edu/" target="_blank">New College of Florida</a></p>
+              <p><a href="http://www.unf.edu/" target="_blank">University of North Florida</a></p>
+              <p><a href="http://uwf.edu/" target="_blank">University of West Florida</a></p>
+              <p><a href="https://floridapolytechnic.org/" target="_blank">Florida Polytechnic University</a></p>
+            </div>
+          </article>
+        </section>
+        <section>
+          <h3>Share the word</h3>
+          <hr>
+          <article>
+            <p>Share the word! <br> Tweet about our exciting research and innovative breakthroughs in the field of renewable energy!</p>
+            <div class="mediaSection">
+              <div class="fb-share-button" data-href="https://raji14.github.io/FESC-Redesign/index.html" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fraji14.github.io%2FFESC-Redesign%2Findex.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+              <div><a class="twitter-share-button spaceBetween" href="https://twitter.com/intent/tweet?text=Florida%20Energy%20Systems%20Consortium%20Bringing%20energy%20solutions%20to%20Florida!" data-size="large">
+Tweet</a></div>
+            </div>
+          </article>
+        </section>
+
+      </section>
     </section>
-    <!-- /.container -->
+    <p class="copyright"> Copyright © Florida Energy Systems Consortium (FESC) 2018</p>
   </footer>
-
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="bootstrap/jquery/jquery.min.js"></script>
-  <script src="bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 </body>
+
 
 </html>
