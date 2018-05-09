@@ -237,7 +237,6 @@ section {
     font-size: 2rem;
     color: #00bc9a;
     margin-bottom: 1rem;
-
   }
   h4 {
     color: #00bc9a;
@@ -246,6 +245,15 @@ section {
     display: inline;
     font-family: $capitalizedfont;
     text-transform: uppercase;
+
+    a {
+      color: #00bc9a;
+      text-decoration: none;
+
+      &:hover {
+        color: $highlightcolor;
+      }
+    }
   }
   p {
     margin: 0;

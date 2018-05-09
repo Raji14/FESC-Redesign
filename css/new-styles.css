@@ -206,6 +206,11 @@ section {
     display: inline;
     font-family: "Open Sans Condensed", sans-serif;
     text-transform: uppercase; }
+    .features h4 a {
+      color: #00bc9a;
+      text-decoration: none; }
+      .features h4 a:hover {
+        color: #f57722; }
   .features p {
     margin: 0; }
   .features img {
