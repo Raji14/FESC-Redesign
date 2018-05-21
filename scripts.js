@@ -15,19 +15,25 @@ function drawBasic() {
       ]);
 
   var options = {
-    title: 'Annual renewable energy production in Florida',
+    title: 'ANNUAL RENEWABLE ENERGY PRODUCTION IN FLORIDA',
+    backgroundColor: '#e1e1e1',
     chartArea: {
-      width: '60%'
+      width: '40%'
     },
     hAxis: {
-      title: 'Trillion Btu',
-      minValue: 0
+      minValue: 0,
+      title: 'TRILLION BTU',
+      titleTextStyle: {
+        color: 'black'
+      }
     },
 
     vAxis: {
-      title: 'Renewable Energy'
+      title: 'RENEWABLE ENERGY',
+      titleTextStyle: {
+        color: 'black'
+      }
     }
-
   };
 
   var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
