@@ -27,6 +27,8 @@
 
   <!-- Custom styles for this template -->
   <link href="css/new-styles.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="components.js"></script>
 
   <script src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="scripts.js"></script>
@@ -46,7 +48,6 @@
       };
       return t;
     }(document, "script", "twitter-wjs"));
-
   </script>
 
 
@@ -65,7 +66,6 @@
       js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-
   </script>
 
   <!-- Nav menu script-->
@@ -101,7 +101,6 @@
     window.onload = function() {
       main();
     }
-
   </script>
 
   <!-- Nav Bar -->
@@ -173,71 +172,12 @@
 
 
   <footer>
-    <section>
-      <section class="mediaSection">
-        <section><a href="index.html"><img src="images/fesc-logo.png" alt="FESC"></a></section>
-        <section>
-          <h3>FESC</h3>
-          <hr>
-          <p><a href="index.html">Home</a></p>
-          <p><a href="research.html">FESC Research</a></p>
-          <p><a href="education.html">Education</a></p>
-          <p><a href="energyindustry.html">Energy Industry</a></p>
-          <p><a href="">About Us</a></p>
-        </section>
-        <section class="affiliateSection">
-          <h3>Affiliates</h3>
-          <hr>
-          <article class="">
-            <div>
-              <p><a href="http://www.ufl.edu/" target="_blank">University of Florida</a></p>
-              <p><a href="http://floridaenergy.ufl.edu/" target="_blank">Florida State University</a></p>
-              <p><a href="https://www.ucf.edu/" target="_blank">University of Central Florida</a></p>
-              <p><a href="http://www.usf.edu/" target="_blank">University of South Florida</a></p>
-              <p><a href="http://www.famu.edu/" target="_blank">Florida A&M University</a></p>
-              <p><a href="http://www.fau.edu/" target="_blank">Florida Atlantic University</a></p>
-              <p><a href="http://www.fgcu.edu/" target="_blank">Florida Gulf Coast University</a></p>
-              <p><a href="https://www.fiu.edu/" target="_blank">Florida International University</a></p>
-              <p><a href="https://www.ncf.edu/" target="_blank">New College of Florida</a></p>
-              <p><a href="http://www.unf.edu/" target="_blank">University of North Florida</a></p>
-              <p><a href="http://uwf.edu/" target="_blank">University of West Florida</a></p>
-              <p><a href="https://floridapolytechnic.org/" target="_blank">Florida Polytechnic University</a></p>
-            </div>
-          </article>
-          <article>
-            <div>
-              <p><a href="http://www.ufl.edu/" target="_blank">University of Florida</a></p>
-              <p><a href="http://floridaenergy.ufl.edu/" target="_blank">Florida State University</a></p>
-              <p><a href="https://www.ucf.edu/" target="_blank">University of Central Florida</a></p>
-              <p><a href="http://www.usf.edu/" target="_blank">University of South Florida</a></p>
-              <p><a href="http://www.famu.edu/" target="_blank">Florida A&M University</a></p>
-              <p><a href="http://www.fau.edu/" target="_blank">Florida Atlantic University</a></p>
-              <p><a href="http://www.fgcu.edu/" target="_blank">Florida Gulf Coast University</a></p>
-              <p><a href="https://www.fiu.edu/" target="_blank">Florida International University</a></p>
-              <p><a href="https://www.ncf.edu/" target="_blank">New College of Florida</a></p>
-              <p><a href="http://www.unf.edu/" target="_blank">University of North Florida</a></p>
-              <p><a href="http://uwf.edu/" target="_blank">University of West Florida</a></p>
-              <p><a href="https://floridapolytechnic.org/" target="_blank">Florida Polytechnic University</a></p>
-            </div>
-          </article>
-        </section>
-        <section>
-          <h3>Share the word</h3>
-          <hr>
-          <article>
-            <p>Share the word! <br> Tweet about our exciting research and innovative breakthroughs in the field of renewable energy!</p>
-            <div class="mediaSection">
-              <div class="fb-share-button" data-href="https://raji14.github.io/FESC-Redesign/index.html" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fraji14.github.io%2FFESC-Redesign%2Findex.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-              <div><a class="twitter-share-button spaceBetween" href="https://twitter.com/intent/tweet?text=Florida%20Energy%20Systems%20Consortium%20Bringing%20energy%20solutions%20to%20Florida!" data-size="large">
-Tweet</a></div>
-            </div>
-          </article>
-        </section>
-
-      </section>
-    </section>
+    <div id="app">
+      <app-footer text=" "></app-footer>
+    </div>
     <p class="copyright"> Copyright © Florida Energy Systems Consortium (FESC) 2018</p>
   </footer>
+  <script src="index.js"></script>
 </body>
 
 </html>
